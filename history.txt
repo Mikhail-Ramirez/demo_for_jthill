@@ -1,0 +1,17 @@
+  440  touch research/
+  441  mkdir research
+  443  touch .gitignore && echo "research/" >> .gitignore
+  444  cd research/
+  445  touch foo
+  446  git add .
+  447  git commit -m "it will"
+  448  git push
+  451  cd ..
+  452  mkdir research_not_ignored
+  453  cd research_not_ignored/
+  454  touch foo
+  455  cd ..
+  456  git add .
+  457  git commit -m "but it does"
+  458  git push
+  459  history > history.txt
